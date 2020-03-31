@@ -1,0 +1,24 @@
+/**app.wxss**/
+pages {
+  position: relative;
+  z-index: 9999998;
+  background: #fff;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+nav-bar {
+  flex: none;
+}
+
+.page-wrapper {
+  position: relative;
+  border-top: 1px solid transparent;
+  transform: translateY(-1px);
+  min-height: 50vh;
+  flex: auto;
+}

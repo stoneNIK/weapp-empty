@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "贵阳市疫情防控登记",
+  "usingComponents": {
+    "footer": "/components/footer/index"
+  }
+}

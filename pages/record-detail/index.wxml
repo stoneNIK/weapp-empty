@@ -1,0 +1,34 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="page-wrapper" style='margin-top: {{navHeight}}px' wx:if="{{urgentRegisterData.name}}">
+    <van-cell-group class="content-panel">
+        <van-cell title="登记站" value="{{urgentRegisterData.stationName}}" />
+        <van-cell title="您的姓名" value="{{urgentRegisterData.name}}" />
+        <van-cell title="身份证号" value="{{urgentRegisterData.idCard}}" />
+        <van-cell title="身份证地址" value="{{urgentRegisterData.idCardAddress}}" />
+        <van-cell title="性别" value="{{urgentRegisterData.gender === 1 ? '男' : '女'}}" />
+        <van-cell title="您的电话" value="{{urgentRegisterData.phone}}" />
+        <van-cell title="紧急联系人" value="{{urgentRegisterData.emerContactPerson}}" />
+        <van-cell title="紧急联系电话" value="{{urgentRegisterData.emerContact}}" />
+        <van-cell title="车次/航班号" value="{{urgentRegisterData.trafficNumber}}" />
+        <van-cell title="出发地点" value="{{urgentRegisterData.becity}}" />
+        <van-cell title="来贵阳事由" value="{{urgentRegisterData.purpose}}" />
+        <van-cell title="预计停留时间" value="{{urgentRegisterData.estimatedStayDays == 0 ? '长期' : ((urgentRegisterData.estimatedStayDays || '') + '天')}}" />
+        <van-cell title="在贵居住区域" value="{{urgentRegisterData.residenceArea}}" />
+        <van-cell title="拟居住小区或酒店名称" value="{{urgentRegisterData.residenceName}}" />
+        <van-cell title="详细地址" value="{{urgentRegisterData.residenceAddress || '-'}}" />
+        <van-cell title="登记时间" value="{{urgentRegisterData.submitDate}}" />
+    </van-cell-group>
+    <view class="qrcode-panel">
+        <view class="qrcode-info">
+            <image class="preview-img" src="{{qrcodeImg || ''}}" bindlongpress="saveImage" />
+            <canvas class="canvas" canvas-id="canvas"></canvas>
+        </view>
+        <view class="title">长按保存通行证二维码</view>
+        <canvas id="draw" style="position: absolute; left: -1000px;top:0;"></canvas>
+    </view>
+    <view class="submit-bar">
+        <van-button type="info" bind:click="modify" disabled="{{!urgentRegisterData.canModify}}" block>
+            修改
+        </van-button>
+    </view>
+</view>

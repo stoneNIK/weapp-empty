@@ -1,0 +1,16 @@
+<view class="navbar" style='height: {{height*2 + 20}}px;'>
+    <text style='line-height: {{height*2 + 44}}px;'>贵阳市疫情防控登记</text>
+</view>
+<view class="banner">
+    <image src="/assets/images/home_banner@2x.png" />
+</view>
+<view class="home-list">
+    <view class="home-list-item" bindtap="navigateRegister">
+        <image src="/assets/images/icon_doctor@2x.png" class="item-img" />
+        <view>
+            <view class="item-title">旅客来贵阳登记</view>
+            <view class="item-content">秉持“线上填写，快速通过”的原则，满足市民在火车站、机场的进出需求</view>
+        </view>
+    </view>
+</view>
+<footer class="home-footer" />

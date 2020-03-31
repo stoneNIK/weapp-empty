@@ -1,0 +1,4 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="page-wrapper" style='margin-top: {{navHeight}}px'>
+    <empty-block desc="网络连接有问题" type="net" fullPage />
+</view>

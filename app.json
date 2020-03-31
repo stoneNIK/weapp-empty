@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/mine/index",
+    "pages/record/index",
+    "pages/register/index",
+    "pages/login/index",
+    "pages/neterror/index",
+    "pages/record-detail/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#8C8C8C",
+    "selectedColor": "#4C88FF",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "assets/images/mine/icon_home@2x.png",
+        "selectedIconPath": "assets/images/mine/icon_home_on@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "assets/images/mine/icon_mine@2x.png",
+        "selectedIconPath": "assets/images/mine/icon_mine_on@2x.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button",
+    "van-field": "@vant/weapp/field",
+    "van-checkbox": "@vant/weapp/checkbox",
+    "van-checkbox-group": "@vant/weapp/checkbox-group",
+    "van-cell": "@vant/weapp/cell",
+    "van-cell-group": "@vant/weapp/cell-group",
+    "van-toast": "@vant/weapp/toast",
+    "van-icon": "@vant/weapp/icon",
+    "van-switch": "@vant/weapp/switch",
+    "van-popup": "@vant/weapp/popup",
+    "van-action-sheet": "@vant/weapp/action-sheet",
+    "van-picker": "@vant/weapp/picker",
+    "van-tab": "@vant/weapp/tab",
+    "van-tabs": "@vant/weapp/tabs",
+    "van-tag": "@vant/weapp/tag",
+    "van-dialog": "@vant/weapp/dialog",
+    "van-datetime-picker": "@vant/weapp/datetime-picker",
+    "van-area": "@vant/weapp/area",
+    "van-swipe-cell": "@vant/weapp/swipe-cell",
+    "nav-bar": "/components/navbar/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

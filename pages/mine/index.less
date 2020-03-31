@@ -1,0 +1,97 @@
+.mine-list {
+  &-item {
+    display: flex;
+    padding: 30rpx;
+    border-bottom: 1px solid #ededed;
+    align-items: center;
+    justify-content: space-between;
+    .item-icon {
+      transform: translateY(-2rpx);
+      width: 48rpx;
+      height: 48rpx;
+      display: block;
+      margin-right: 15rpx;
+      flex: none;
+    }
+    .item-title {
+      flex: auto;
+      width: 128px;
+      font-size: 32rpx;
+      font-weight: 400;
+      color: rgba(66, 66, 66, 1);
+      line-height: 44rpx;
+    }
+    .icon-link {
+      flex: none;
+    }
+    van-icon .van-icon::before {
+      display: block;
+    }
+  }
+}
+
+.banner {
+  height: 278rpx;
+  .banner-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 278rpx;
+    z-index: -1;
+  }
+  .avatar {
+    margin: 20rpx auto;
+    display: flex;
+    justify-content: center;
+    .avatar-img {
+      width: 132rpx;
+      height: 132rpx;
+      border-radius: 100%;
+      border: 5rpx solid #fff;
+      box-shadow: 0 2rpx 10rpx rgba(95, 71, 71, 0.02);
+      overflow: hidden;
+    }
+  }
+  .username {
+    font-size: 32rpx;
+    color: rgba(34, 34, 34, 1);
+    line-height: 44rpx;
+    text-align: center;
+  }
+  .phone {
+    font-size: 32rpx;
+    color: rgba(66, 66, 66, 1);
+    line-height: 44rpx;
+    text-align: center;
+  }
+}
+
+.logout-wrap {
+  margin: 136rpx 40rpx 20rpx;
+  .option-btn {
+    margin: 20rpx 30rpx;
+    padding: 26rpx;
+    background: rgba(243, 243, 243, 1);
+    border-radius: 12rpx;
+    font-size: 32rpx;
+    color: rgba(26, 26, 26, 1);
+    line-height: 44rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.logout {
+      background: rgba(243, 243, 243, 1);
+    }
+    &.login {
+      background: #4c88ff;
+      color: #fff;
+    }
+  }
+}
+
+.mine-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

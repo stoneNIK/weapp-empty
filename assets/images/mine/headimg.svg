@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="66px" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.1 (89650) - https://sketch.com -->
+    <title>img-user</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-15.9%" y="-15.9%" width="131.8%" height="131.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <circle id="path-2" cx="33" cy="33" r="26.0526316"></circle>
+        <linearGradient x1="61.7729646%" y1="88.4216981%" x2="50%" y2="3.061617e-15%" id="linearGradient-4">
+            <stop stop-color="#EEF1F0" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="贵阳市入境通道疫情检疫站登记" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="我的-未登录" transform="translate(-155.000000, -74.000000)">
+            <g id="内容" transform="translate(0.000000, 64.000000)">
+                <g id="头部">
+                    <g id="title" transform="translate(155.000000, 10.000000)">
+                        <g id="img-user" filter="url(#filter-1)">
+                            <mask id="mask-3" fill="white">
+                                <use xlink:href="#path-2"></use>
+                            </mask>
+                            <circle stroke="#FFFFFF" stroke-width="3" cx="33" cy="33" r="27.5526316"></circle>
+                            <path d="M13.4523226,56.9863357 L13.4523189,56.9820641 L13.8651733,56.7848434 C17.4007669,55.1214618 16.2034275,56.3968697 20.7755611,54.5727808 L22.4167867,53.9064594 C26.3105483,52.3073933 27.2812861,51.7658281 27.2812861,51.7658281 L26.9905173,48.196163 L26.8212368,48.1306139 C25.9790626,47.7803758 22.2505974,45.9384878 21.4814195,40.5205482 C19.7764566,40.9709458 19.1711948,38.7643687 19.0577185,37.2755971 L19.0367053,37.0107868 C18.8846622,35.4278381 18.0942831,31.2751651 20.1555135,31.6592316 L19.9393184,30.1448454 C19.6134227,27.7790184 19.3997816,25.7259686 19.53133,24.5366636 C20.0567563,19.5754615 23.7843094,14.3969846 33.157328,13.9089812 L33.464975,13.8947368 C35.6289223,13.9811723 37.7633839,14.4657478 39.7765948,15.3276306 C40.4860709,15.6292925 45.0802189,15.0133995 45.7005253,16.3708778 C46.0339436,17.1082731 45.0026836,19.3497885 45.5609598,19.8316128 C47.7584705,21.7396653 47.2307932,22.1151489 47.4444967,24.3836939 L47.4606528,24.5450791 C47.6157298,25.9779729 47.3016994,28.671984 46.8636071,31.6676471 C48.9585062,31.2724878 48.104641,35.5845778 47.9857958,37.0987706 L47.9638926,37.3854147 C47.8283026,38.8747235 47.2260988,40.9772702 45.5570826,40.5373498 C44.684776,46.6543783 39.0167186,48.2255338 39.0167186,48.2255338 L38.7220725,51.8077682 L38.9430103,51.9278167 C39.4735748,52.2048856 41.0764406,52.9892775 44.9716677,54.5646255 L45.4794365,54.7661951 C49.9190417,56.4957026 48.5820988,55.0535767 52.5549197,56.9779202 C59.0526316,60.1453696 59.0526316,68.8223701 59.0526316,68.8223701 C59.0526316,70.1421406 57.9593406,71.2105263 56.6101731,71.2105263 L9.38930928,71.2105263 C8.08366327,71.2105263 7.01765196,70.209957 6.95023567,68.9530778 L6.94736842,68.7795147 C6.95888544,68.0900126 7.22665604,60.0095348 13.4523226,56.9863357 Z" id="路径" stroke="#D1D9DB" stroke-width="1.50304349" fill="url(#linearGradient-4)" fill-rule="nonzero" mask="url(#mask-3)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

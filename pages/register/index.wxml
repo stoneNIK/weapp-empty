@@ -1,0 +1,53 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="urgent-register-notify" style="top: {{navHeight}}px">请依法登记，谢谢配合！</view>
+<view class="page-wrapper" style='margin-top: {{navHeight}}px'>
+    <view class="form-group first-group">
+        <van-cell-group>
+            <van-cell title="登记站" value="{{formData.stationName}}" bindtap="showStationPop" value-class="cell-value" is-link />
+        </van-cell-group>
+    </view>
+    <view class="form-group">
+        <van-cell-group>
+            <van-field input-align="right" label="您的姓名" placeholder="请填写您的姓名" value="{{formData.name}}" data-type='name' bindinput='changeFormData' />
+            <van-field input-align="right" label="身份证号" maxlength="18" placeholder="请填写身份证号" type="idcard" value="{{formData.idCard}}" data-type='idCard' bindinput='changeFormData' />
+            <van-field input-align="right" label="身份证地址" placeholder="请填写详细身份证地址" value="{{formData.idCardAddress}}" data-type='idCardAddress' bindinput='changeFormData' />
+            <van-cell title="性别" value="{{formData.gender ? genders[formData.gender - 1].name : '请选择'}}" bindtap="showGenderPop" value-class="{{formData.gender ? 'cell-value' : ''}}" is-link />
+            <van-field input-align="right" label="您的电话" maxlength="11" type="tel" placeholder="请填写联系电话" value="{{formData.phone}}" data-type='phone' bindinput='changeFormData' />
+        </van-cell-group>
+    </view>
+    <view class="form-group">
+        <van-cell-group>
+            <van-field input-align="right" label="紧急联系人" placeholder="亲朋好友均可" value="{{formData.emerContactPerson}}" data-type='emerContactPerson' bindinput='changeFormData' />
+            <van-field input-align="right" label="紧急联系电话" maxlength="11" type="tel" placeholder="请填写紧急联系人电话" value="{{formData.emerContact}}" data-type='emerContact' bindinput='changeFormData' />
+        </van-cell-group>
+    </view>
+    <view class="form-group">
+        <van-cell-group class="cell-group">
+            <van-field input-align="right" maxlength="10" label="车次/航班号" list="traffic_list" placeholder="请填写车次/航班号" value="{{formData.trafficNumber}}" data-type='trafficNumber' bindinput='changeFormData' />
+            <van-field input-align="right" label="出发地点" placeholder="请填写出发地点" value="{{formData.becity}}" data-type='becity' bindinput='changeFormData' />
+            <van-cell title="来贵阳事由" value="{{formData.purpose || '请选择'}}" bindtap="showPurposePop" value-class="{{formData.purpose ? 'cell-value' : ''}}" is-link />
+            <van-cell title="是否长期停留" bind:click="toogleEstimatedStayType">
+                <van-checkbox value="{{ checkedEstimated }}" class="checkbox-estimated" slot="right-icon" />
+            </van-cell>
+            <van-field wx:if="{{formData.estimatedStayDays}}" type="digit" min="1" maxlength="3" input-align="right" label="预计停留时间" placeholder="请输入停留天数" value="{{formData.estimatedStayDays}}" bind:change='onChangeStayDays'>
+                <span slot="right-icon" class="cell-value">天</span>
+            </van-field>
+            <van-cell title="在贵居住区域" value="{{formData.residenceArea || '请选择'}}" bindtap="showAreaPop" value-class="{{formData.residenceArea ? 'cell-value' : ''}}" is-link />
+        </van-cell-group>
+    </view>
+    <view class="form-group">
+        <van-cell-group>
+            <van-field input-align="right" title-width="150" label="拟居住小区或酒店名称" placeholder="请填写" value="{{formData.residenceName}}" data-type='residenceName' bindinput='changeFormData' />
+            <van-field input-align="right" title-width="130" label="详细地址(非必填)" placeholder="请填写详细地址" value="{{formData.residenceAddress}}" data-type='residenceAddress' bindinput='changeFormData' />
+        </van-cell-group>
+    </view>
+    <view class="submit-bar">
+        <van-button type="info" loading="{{submiting}}" loading-text="提交中" bind:click="submit" disabled="{{submiting}}" block>
+            确认提交
+        </van-button>
+    </view>
+</view>
+<van-action-sheet show="{{showStationOptions}}" actions="{{stations}}" bind:select="onSelectStation" cancel-text="取消" bind:cancel="onCancelStation" bind:click-overlay="onCancelStation" />
+<van-action-sheet show="{{showGenderOptions}}" actions="{{genders}}" bind:select="onSelectGender" cancel-text="取消" bind:cancel="onCancelGender" bind:click-overlay="onCancelGender" />
+<van-action-sheet show="{{showPurposeOptions}}" actions="{{purposes}}" bind:select="onSelectPurpose" cancel-text="取消" bind:cancel="onCancelPurpose" bind:click-overlay="onCancelPurpose" />
+<van-action-sheet show="{{showAreaOptions}}" actions="{{areas}}" bind:select="onSelectArea" cancel-text="取消" bind:cancel="onCancelArea" bind:click-overlay="onCancelArea" />

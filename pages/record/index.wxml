@@ -1,0 +1,17 @@
+<nav-bar navbar-data='{{nvabarData}}' navBackFunc="{{navBackFunc}}"></nav-bar>
+<view class="page-wrapper" style='margin-top: {{navHeight}}px'>
+    <empty-block wx:if="{{!listData.length}}" fullPage type="content" desc="暂无信息" />
+    <view class="record-list" wx:else>
+        <view class="record-list-item" wx:for="{{listData}}" wx:key="index">
+            <view class="record-title">{{item.submitDate}}</view>
+            <view class="record-content" bindtap="navigate" data-id="{{item.urgentId}}">
+                <view class="item-info">
+                    <view>登记站：{{item.stationName}}</view>
+                    <view>出发地：{{item.becity}}</view>
+                    <view>来贵阳事由：{{item.purpose}}</view>
+                </view>
+                <van-icon name="arrow" />
+            </view>
+        </view>
+    </view>
+</view>

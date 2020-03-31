@@ -1,0 +1,29 @@
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class="page-wrapper" style='margin-top: {{navHeight}}px'>
+    <view class="banner">
+        <image src="/assets/images/mine/login_bg.svg" class="banner-bg" />
+        <view class="avatar">
+            <view class="avatar-img">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+        </view>
+        <view class="username">
+            <open-data type="userNickName" class="nickname"></open-data>
+        </view>
+        <view class="phone">{{userInfo.phone || '未登录'}}</view>
+    </view>
+    <view class="mine-list" wx:if="{{userInfo.id}}">
+        <view class="mine-list-item" data-url="/pages/record/index" bindtap="navigate">
+            <image src="/assets/images/mine/icon_profile.svg" slot="icon" class="item-icon" />
+            <view class="item-title">我的登记</view>
+            <view class="item-link">
+                <van-icon name="arrow" color="#BBB8BB" size="32rpx" />
+            </view>
+        </view>
+    </view>
+    <view class="logout-wrap">
+        <view class="option-btn logout" wx:if="{{userInfo.id}}" bindtap="logout">退出登录</view>
+        <view class="option-btn login" wx:else bindtap="navigateLogin">登录</view>
+    </view>
+    <footer class="mine-footer" />
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "网络异常",
+  "usingComponents": {
+    "empty-block": "/components/empty-block/index"
+  }
+}
