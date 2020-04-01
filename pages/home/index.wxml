@@ -5,7 +5,7 @@
     <image src="/assets/images/home_banner@2x.png" />
 </view>
 <view class="home-list">
-    <view class="home-list-item">
+    <view class="home-list-item" bindtap="navigateRegister">
         <image src="/assets/images/icon_doctor@2x.png" class="item-img" />
         <view>
             <view class="item-title">旅客来贵阳登记</view>
