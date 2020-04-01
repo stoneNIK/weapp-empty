@@ -1,4 +1,5 @@
 const app = getApp()
+const urgentApi = app.API.urgent
 
 Page({
   data: {
@@ -68,7 +69,7 @@ Page({
   },
 
   async loadInitData() {
-    const res = await app.API.getRecordDetail(this.data.urgentId)
+    const res = await urgentApi.getRecordDetail(this.data.urgentId)
     this.setData({
       formData: res,
       checkedEstimated: !res.estimatedStayDays
@@ -267,7 +268,7 @@ Page({
     })
 
     try {
-      await app.API.saveRecord(formData)
+      await urgentApi.saveRecord(formData)
       if (this.data.urgentId) {
         wx.navigateBack({
           delta: 2

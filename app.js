@@ -38,7 +38,7 @@ App({
           success: async response => {
             // 尝试静默登陆
             try {
-              const res = await API.login(response.code)
+              const res = await API.user.login(response.code)
               wx.setStorageSync(consts.WEAPP_TOKEN, res.weappToken)
               wx.setStorageSync(consts.TOKEN, res.token)
               that.globalData.userInfo = res.userInfo

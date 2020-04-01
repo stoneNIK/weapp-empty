@@ -1,5 +1,6 @@
 const app = getApp()
 const consts = require("../../config/consts")
+const userApi = app.API.user
 
 Page({
   data: {
@@ -25,7 +26,7 @@ Page({
   //     })
   //   },
   async logout() {
-    await app.API.logout()
+    await userApi.logout()
     app.globalData.userInfo = {}
     wx.removeStorageSync(consts.USER_INFO)
     wx.removeStorageSync(consts.WEAPP_TOKEN)

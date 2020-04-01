@@ -1,5 +1,6 @@
 const app = getApp()
 const QRCode = require("../../utils/weapp-qrcode")
+const urgentApi = app.API.urgent
 
 const CanvasId = "canvas"
 
@@ -31,7 +32,7 @@ Page({
     this.loadData()
   },
   async loadData() {
-    const urgentRegisterData = await app.API.getRecordDetail(this.data.urgentId)
+    const urgentRegisterData = await urgentApi.getRecordDetail(this.data.urgentId)
     this.setData({
       urgentRegisterData
     })

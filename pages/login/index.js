@@ -1,5 +1,5 @@
 const app = getApp()
-const API = app.API
+const userApi = app.API.user
 const consts = require("../../config/consts")
 
 Page({
@@ -16,7 +16,7 @@ Page({
     wx.login({
       success: async response => {
         try {
-          const res = await API.login(response.code)
+          const res = await userApi.login(response.code)
           wx.setStorageSync(consts.WEAPP_TOKEN, res.weappToken)
           app.globalData.userInfo = res.userInfo
         } catch (error) {}
@@ -29,7 +29,7 @@ Page({
       return
     }
     const weappToken = wx.getStorageSync(consts.WEAPP_TOKEN) // 静默登陆获取
-    const res = await API.weappLogin({
+    const res = await userApi.weappLogin({
       encryptedData,
       iv,
       weappToken

@@ -1,4 +1,5 @@
 const app = getApp()
+const urgentApi = app.API.urgent
 
 Page({
   /**
@@ -44,7 +45,7 @@ Page({
   },
 
   async loadData() {
-    const { list } = await app.API.getRecordList()
+    const { list } = await urgentApi.getRecordList()
     this.setData({
       listData: list
     })
